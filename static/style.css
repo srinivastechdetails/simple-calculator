@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #222;
+    margin: 0;
+    overflow: hidden;
+    /* Prevent scrolling on mobile if not needed */
+}
+
+.calculator {
+    background-color: #55595c;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 320px;
+    /* Limit width on larger screens */
+    box-sizing: border-box;
+    /* Ensure padding is included in width */
+}
+
+.display {
+    background-color: #dce1e6;
+    color: #333;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: right;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 60px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    word-break: break-all;
+    /* Handle long numbers */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 1.5rem;
+    /* Slightly smaller font for better fit */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #bbb;
+    transition: transform 0.1s, box-shadow 0.1s;
+    touch-action: manipulation;
+    /* Improve touch response */
+    -webkit-tap-highlight-color: transparent;
+    /* Remove tap highlight on mobile */
+}
+
+button:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+button.operator {
+    font-size: 1.8rem;
+}
+
+button.equals {
+    background-color: #fca33d;
+    color: white;
+    box-shadow: 0 4px 0 #d68a32;
+}
+
+button.equals:active {
+    box-shadow: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 400px) {
+    .calculator {
+        width: 95%;
+        /* Take up most of the screen width */
+        padding: 15px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    button {
+        padding: 15px;
+        /* Smaller padding for smaller screens */
+        font-size: 1.2rem;
+    }
+
+    .display {
+        font-size: 2rem;
+        /* Smaller font for display */
+        height: 50px;
+    }
+}

@@ -1,0 +1,19 @@
+# .dockerignore
+.git
+.github
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+*.md
+test_*.py
+Rough/
+*.egg-info/
+*.dist-info/
+.pytest_cache
+.python-version
+uv.lock
+pyproject.toml
